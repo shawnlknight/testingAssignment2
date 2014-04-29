@@ -8,25 +8,41 @@ define(function() {
     },
 
     sum : function(arr) {
-       var sum = _.reduce([1, 2, 3, 4], function(memo, num){ return memo + num; }, 0);
- 
+        var something = 0;
 
-  //       for(var i = 0, len = arr.length; i < len; i++) {//i++ adds one
-  //         something +=  arr[i];
-  //       }
-  //       return something; 
-  // };
+        for (var i = 0; i < arr.length; i++) {
+          something +=  arr[i];
+        }
+        return something; 
+  
        
 
     },
 
     remove : function(arr, item) {
+            var somethingArr = [];
+
+            for(var i=0; i < arr.length; i++) {
+                if(arr[i] !== item) {
+                    somethingArr.push(arr[i]);
+                }
+            }
             
-        
+            return somethingArr;
     },
 
     removeWithoutCopy : function(arr, item) {
+             var somethingArr = [];
 
+            for(var i=0; i < arr.length; i++) {
+                if(arr[i] !== item) {
+                    somethingArr.splice(arr[i]);
+                    somethingArr.push(arr[i]);
+                    somethingArr.push(arr[i]);
+                }
+            }
+            
+            return somethingArr;
 
     },
 
@@ -53,7 +69,7 @@ define(function() {
     concat : function(arr1, arr2) {
 
 
-    },
+    }, 
 
     insert : function(arr, item, index) {
 
@@ -70,7 +86,12 @@ define(function() {
     },
 
     square : function(arr) {
+        var newArr = [];
+        for(var i=0; i < arr.length; i++) {
+            newArr.push(arr[i] * arr[i]);
+        }
 
+        return newArr;
 
     },
 
