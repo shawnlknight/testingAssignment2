@@ -19,19 +19,20 @@ define(function() {
       var getValue;
 
       if (flag) {
-        function getValue() { return 'a'; }
+      getValue = function () { return 'a'; }
       } else {
-        function getValue() { return 'a'; }
+      getValue = function () { return 'b'; }
       }
 
       return getValue();
     },
 
     parseInt : function(num) {
-      return parseInt(num);
+      return parseInt(num, 10);
     },
 
     identity : function(val1, val2) {
+      return val1 === val2;
 
     }
   };

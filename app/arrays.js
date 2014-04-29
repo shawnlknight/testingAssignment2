@@ -3,13 +3,19 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     indexOf : function(arr, item) {
-
-      
+        return arr.indexOf(item);
 
     },
 
     sum : function(arr) {
+       var sum = _.reduce([1, 2, 3, 4], function(memo, num){ return memo + num; }, 0);
+ 
 
+  //       for(var i = 0, len = arr.length; i < len; i++) {//i++ adds one
+  //         something +=  arr[i];
+  //       }
+  //       return something; 
+  // };
        
 
     },
