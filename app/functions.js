@@ -16,7 +16,12 @@ define(function() {
     },
 
     useArguments : function() {
-    	return 
+    	var something = 0;
+
+        for (var i = 0, length = arguments.length; i < length; i++) {
+          something +=  arguments[i];
+        }
+        return something;
 
     }
   };

@@ -3,16 +3,37 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     fizzBuzz : function(num) {
+
+      if (typeof num !== 'number') {
+        return false;
+      } 
+
+      if (num % 3 && num % 5) {
+        return num;
+      }
+
       if (num % 3) {
-        return ('fizz');
-      } else if (num % 5) {
-        return ('buzz');
-      } else if (num % 3 && 5) {
-        return ('fizzbuzz');
-      } else if (num = num) {
-        return (num);
-      } else 
-        return (false);
+        return 'buzz';
+      } 
+
+      if (num % 5) {
+        return 'fizz';
+      } 
+
+
+
+
+
+      return 'fizzbuzz'
+
+
+
+
+
+
+
+
+        
 
 
       // write a function that receives a number as its argument;
