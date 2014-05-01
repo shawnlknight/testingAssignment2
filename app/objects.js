@@ -8,11 +8,18 @@ define(function() {
     },
 
     alterObjects : function(constructor, greeting) {
-    	return fn.call(constructor, greeting);
+    	constructor.prototype.greeting = greeting;
 
     },
 
+//The hasOwnProperty() method returns a boolean indicating whether the object has the specified property.
     iterate : function(obj) {
+    //     var foo = {};
+
+    // for (var something in obj) {
+    //     if (obj.hasOwnProperty(something)) {
+    //         (something + "" + obj[something]);
+    //     }
 
     }
   };

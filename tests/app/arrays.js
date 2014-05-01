@@ -92,12 +92,12 @@ define([
       expect(result).to.eql(4);
     });
 
-    // it('you should be able to find duplicates in an array', function() {
-    //   var result = answers.duplicates([ 1, 2, 4, 4, 3, 3, 1, 5, 3 ]);
+    it('you should be able to find duplicates in an array', function() {
+      var result = answers.duplicates([ 1, 2, 4, 4, 3, 3, 1, 5, 3 ]);
 
-    //   expect(result).to.have.length(3);
-    //   expect(result.sort().join(' ')).to.eql('1 3 4');
-    // });
+      expect(result).to.have.length(3);
+      expect(result.sort().join(' ')).to.eql('1 3 4');
+    });
 
     it('you should be able to square each number in an array', function() {
       var result = answers.square(a);
