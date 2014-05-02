@@ -89,15 +89,11 @@ define(function() {
     count : function(arr, item) {
 
 
+
     },
 
     duplicates : function(arr) {
-        var something = 0;
-
-        for (var i = 0; i < arr.length; i++) {
-          something +=  arr[i];
-        }
-        return something;
+ 
 
 
     },
