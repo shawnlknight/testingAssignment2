@@ -14,12 +14,17 @@ define(function() {
 
 //The hasOwnProperty() method returns a boolean indicating whether the object has the specified property.
     iterate : function(obj) {
-    //     var foo = {};
+        var something = [];
 
-    // for (var something in obj) {
-    //     if (obj.hasOwnProperty(something)) {
-    //         (something + "" + obj[something]);
-    //     }
+        for(var prop in obj) {
+            if(obj.hasOwnProperty(prop)) {
+                something.push(prop + ': ' + obj[prop]);
+            }
+        }
+        
+        return something;
+
+
 
     }
   };

@@ -32,16 +32,17 @@ define(function() {
     },
 
     removeWithoutCopy : function(arr, item) {
-             var somethingArr = [];
 
             for(var i=0; i < arr.length; i++) {
-                if(arr[i] !== item) {
-                    somethingArr.splice(arr[i]);
+                if(arr[i] == item) {
+                    arr.splice(i, 1);
+                    arr.length = arr.length - 1;
+                    i = i -1;
                     
                 }
             }
             
-            return somethingArr;
+            return arr;
 
     },
 
@@ -87,12 +88,18 @@ define(function() {
     },
 
     count : function(arr, item) {
-
-
+        var countAllOccur = [];
+        for (var i = 0; i < arr.length; i++) {
+            if(arr[i] == item) {
+                countAllOccur.push(arr[i]);
+            }
+        }
+        return countAllOccur.length;
 
     },
 
     duplicates : function(arr) {
+        
  
 
 
@@ -109,7 +116,13 @@ define(function() {
     },
 
     findAllOccurrences : function(arr, target) {
-
+        var allOccur = 0;
+        _.each(arr, function(elem) {
+            if(target == elem) {
+                allOccur += elem;
+            }
+        });
+        return allOccur;
     }
   };
 });
